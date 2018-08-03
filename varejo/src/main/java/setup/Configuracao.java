@@ -6,14 +6,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Configuracao {
 
-	WebDriver navegador;
+	protected WebDriver navegador;
 
 	public WebDriver getDriver() {
+		
 		return navegador;
+		
 	}
 
 	public void setDriver(WebDriver navegador) {
+		
 		this.navegador = navegador;
+		
 	}
 
 	public WebDriver abrirNavegador(String nomeNavegador, String url) {
@@ -22,27 +26,30 @@ public class Configuracao {
 		String propriedadeChromeCaminho = "/Users/edimilsonestevam/Downloads/drivers/chromedriver";
 		String propriedadeFirefox = "webdriver.gecko.driver";
 		String prorpiedadeFirefoxCaminho = "/Users/edimilsonestevam/Downloads/drivers/geckodriver";
+		String https = "https://";
 
 		if (nomeNavegador.equalsIgnoreCase("chrome")) {
 			System.setProperty(propriedadeChrome, propriedadeChromeCaminho);
-			WebDriver chrome = new ChromeDriver();
-			chrome.manage().window().maximize();
-			chrome.get(url);
-			return chrome;
+			WebDriver navegador = new ChromeDriver();
+			navegador.manage().window().maximize();
+			navegador.get(https + url);
+			return navegador;
 		} else if (nomeNavegador.equalsIgnoreCase("firefox")) {
 			System.setProperty(propriedadeFirefox, prorpiedadeFirefoxCaminho);
-			WebDriver firefox = new FirefoxDriver();
-			firefox.manage().window().maximize();
-			firefox.get(url);
-			return firefox;
+			WebDriver navegador = new FirefoxDriver();
+			navegador.manage().window().maximize();
+			navegador.get(https + url);
+			return navegador;
 		} else {
 			System.out.println("Ainda falta implementar este navegador, " + nomeNavegador);
 		}
 		return null;
 	}
 	
-	public void fecharNavegador() {
-		navegador.quit();	
+	public void fecharNavegador(WebDriver navegador) {
+		
+		this.navegador = navegador;
+		navegador.quit();
 	}
 
 }
