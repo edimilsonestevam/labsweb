@@ -5,13 +5,21 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import setup.Base;
+public class Login {
 
-public class Login extends Base{
-
+	private WebDriver navegador;
+	
 	public Login(WebDriver navegador) {
+		this.navegador = navegador;	
+	}
+	
+	public Login clicarLinkSignIn() {
 		
-		super(navegador);
+		String linkLogin = "//a[@class='linkButtonSigninHeader']";
+		
+		navegador.findElement(By.xpath(linkLogin)).click();
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		return new Login (navegador);
 		
 	}
 	
@@ -27,7 +35,8 @@ public class Login extends Base{
 		
 	}
 	
-	public CaixaDeEntrada informarSenha(String senha) {
+	
+	public Login informarSenha(String senha) {
 	
 		String campoSenha = "i0118";
 		String digitarSenha = senha;
@@ -36,8 +45,8 @@ public class Login extends Base{
 		navegador.findElement(By.id(campoSenha)).sendKeys(digitarSenha);
 		navegador.findElement(By.id(botaoLogin)).click();
 		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		return new CaixaDeEntrada(navegador);
+		return new Login(navegador);
 		
 	}
-
+	
 }

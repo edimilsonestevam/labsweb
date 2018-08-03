@@ -3,16 +3,14 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import org.junit.Assert;
+import junit.framework.Assert;
 
-import setup.Base;
-
-public class CaixaDeEntrada extends Base{
+public class CaixaDeEntrada {
+	
+	private WebDriver navegador;
 	
 	public CaixaDeEntrada(WebDriver navegador) {
-		
-		super(navegador);
-		
+		this.navegador = navegador;		
 	}
 	
 	public CaixaDeEntrada visualizarCaixaDeEntrada() {

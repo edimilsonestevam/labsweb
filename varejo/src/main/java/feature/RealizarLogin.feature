@@ -9,5 +9,5 @@ Cenario: Login com credenciais validas - Sucesso
 	E Usuario informar senha <senha> e clicar no botao Login	  
 	Entao Usuario visualiza a Caixa de entrada de e-mail
 	
-	  | site                          | email                | senha       | 
+	    | site                          | email                | senha       | 
       | https://outlook.live.com/owa/ | testeEEC@outlook.com | Teste123456 |
