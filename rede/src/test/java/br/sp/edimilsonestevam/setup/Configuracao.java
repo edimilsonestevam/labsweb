@@ -46,10 +46,10 @@ public class Configuracao {
 		return null;
 	}
 	
-	public void fecharNavegador() {
+	public void fecharNavegador(WebDriver navegador) {
 		
-		navegador.quit();	
-		
+		this.navegador = navegador;
+		navegador.quit();
 	}
 
 }
