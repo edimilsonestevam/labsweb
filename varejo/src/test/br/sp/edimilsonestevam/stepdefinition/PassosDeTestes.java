@@ -1,16 +1,16 @@
-package stepDefinition;
+package br.sp.edimilsonestevam.stepdefinition;
 
 import org.openqa.selenium.WebDriver;
 
+import br.sp.edimilsonestevam.page.CaixaDeEntrada;
+import br.sp.edimilsonestevam.page.Home;
+import br.sp.edimilsonestevam.page.Login;
+import br.sp.edimilsonestevam.setup.Configuracao;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-import page.CaixaDeEntrada;
-import page.Home;
-import page.Login;
-import setup.Configuracao;
 
 
 public class PassosDeTestes{

@@ -1,4 +1,4 @@
-package setup;
+package br.sp.edimilsonestevam.setup;
 
 import org.openqa.selenium.WebDriver;
 

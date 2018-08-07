@@ -1,11 +1,11 @@
-package page;
+package br.sp.edimilsonestevam.page;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import setup.Base;
+import br.sp.edimilsonestevam.setup.Base;
 
 public class Login extends Base{
 

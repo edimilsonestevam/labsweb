@@ -1,11 +1,11 @@
-package page;
+package br.sp.edimilsonestevam.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import org.junit.Assert;
+import br.sp.edimilsonestevam.setup.Base;
 
-import setup.Base;
+import org.junit.Assert;
 
 public class CaixaDeEntrada extends Base{
 	
