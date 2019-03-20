@@ -38,28 +38,28 @@ formatter.match({
   "location": "Test_Steps.eu_quero_cadastrar_um_usuario_no_app_ToDo()"
 });
 formatter.result({
-  "duration": 10284344928,
+  "duration": 12129946231,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_clico_em_Register_informo_nome_email_senha_confirmo_a_senha()"
 });
 formatter.result({
-  "duration": 3054348296,
+  "duration": 2738829493,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_clico_no_botao_Sign_up()"
 });
 formatter.result({
-  "duration": 5225825717,
+  "duration": 4434232203,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.o_sistema_apresenta_a_pagina_de_principal_do_app_ToDo()"
 });
 formatter.result({
-  "duration": 30300626,
+  "duration": 41174858,
   "status": "passed"
 });
 formatter.uri("US#1CreateTask_Test.feature");
@@ -97,21 +97,21 @@ formatter.match({
   "location": "Test_Steps.eu_sou_um_usuario_do_app_ToDo()"
 });
 formatter.result({
-  "duration": 43570346,
+  "duration": 45624158,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_cadastro_uma_tarefa()"
 });
 formatter.result({
-  "duration": 2799054294,
+  "duration": 12863243100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_vejo_a_minha_tarefa_na_lista_de_tarefas()"
 });
 formatter.result({
-  "duration": 42231993,
+  "duration": 35280576,
   "status": "passed"
 });
 formatter.uri("US#2CreateSubTask_Test.feature");
@@ -149,21 +149,21 @@ formatter.match({
   "location": "Test_Steps.eu_sou_um_usuario_do_app_ToDo()"
 });
 formatter.result({
-  "duration": 35335691,
+  "duration": 52355630,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_cadastro_uma_subtarefa()"
 });
 formatter.result({
-  "duration": 1024356808,
+  "duration": 1074491641,
   "status": "passed"
 });
 formatter.match({
   "location": "Test_Steps.eu_vejo_a_subtarefa_na_lista_de_subtarefas()"
 });
 formatter.result({
-  "duration": 3940147277,
+  "duration": 3151952736,
   "status": "passed"
 });
 });

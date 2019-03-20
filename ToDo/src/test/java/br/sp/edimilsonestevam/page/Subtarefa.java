@@ -38,17 +38,17 @@ public class Subtarefa extends Base{
 	}
 	
 	//This pop up should have a read only field with the task ID and the task description
-	public void validarCamposTaskIdETaskDescription() {
+	public void validarCamposTaskIdETaskDescription(String novoNomeDaTarefa) {
 	
-		String tituloDaTarefa = navegador.findElement(By.xpath("//h3[@class='modal-title ng-binding']")).getText();
+		String xPathDoNomeDaTarefa = "//h3[@class='modal-title ng-binding']";
 		
-		if(tituloDaTarefa.isEmpty()) {
-			System.out.println("Título da Tarefa está em branco, "+ tituloDaTarefa +", VERIFICAR!");
-		}
-		else {
-			navegador.findElement(By.xpath("//button[@class='btn btn-xs btn-primary ng-binding']")).sendKeys("CAMPO SOMENTE LEITURA");
-			System.out.println("Título da Tarefa está OK!" + navegador);
-		}
+		navegador.findElement(By.xpath(xPathDoNomeDaTarefa)).click();
+		
+		
+		String mensagem = "VALIDANDO NOME DA TAREFA: ";
+		String NomeAtualDaTarefa = navegador.findElement(By.xpath(xPathDoNomeDaTarefa)).getText();
+		Assert.assertNotEquals(mensagem, novoNomeDaTarefa, NomeAtualDaTarefa);
+		
 	}
 	
 	//There should be a form so you can enter the SubTask Description (250 characters) and SubTask due date (MM/dd/yyyy format)
