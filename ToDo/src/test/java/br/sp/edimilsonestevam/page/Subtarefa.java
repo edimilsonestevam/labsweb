@@ -48,7 +48,7 @@ public class Subtarefa extends Base{
 	
 		String xPathDoNomeDaTarefa = "//h3[@class='modal-title ng-binding']";
 		
-		navegador.findElement(By.xpath(xPathDoNomeDaTarefa));
+		navegador.findElement(By.xpath(xPathDoNomeDaTarefa)).isDisplayed();
 		
 		File scrFile = ((TakesScreenshot)navegador).getScreenshotAs(OutputType.FILE);
 		try {
