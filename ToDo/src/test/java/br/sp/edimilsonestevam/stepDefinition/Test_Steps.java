@@ -30,7 +30,7 @@ public class Test_Steps{
 	@When("^eu clico em Register, informo nome, email, senha, confirmo a senha$")
 	public void eu_clico_em_Register_informo_nome_email_senha_confirmo_a_senha() throws Throwable {
 
-		new Usuario(navegador).clicarRegister().informarDadosPessoais("Julia Teste46", "juliateste46@gmail.com", "teste123", "teste123");
+		new Usuario(navegador).clicarRegister().informarDadosPessoais("Julia Teste53", "juliateste53@gmail.com", "teste123", "teste123");
 	}
 	
 	@Test
@@ -51,7 +51,7 @@ public class Test_Steps{
 	@Given("^eu sou um usuario do app ToDo$")
 	public void eu_sou_um_usuario_do_app_ToDo() throws Throwable {
 
-		new Home(navegador).validarMensagemDepoisQueEstiverLogado("Welcome, Julia Teste46!", "Welcome, Julia Teste46!");
+		new Home(navegador).validarMensagemDepoisQueEstiverLogado("Welcome, Julia Teste53!", "Welcome, Julia Teste53!");
 	}
 
 	@Test
