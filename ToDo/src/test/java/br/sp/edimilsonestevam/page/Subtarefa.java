@@ -2,10 +2,16 @@ package br.sp.edimilsonestevam.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.TakesScreenshot;
 
 import br.sp.edimilsonestevam.setup.Base;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 
 public class Subtarefa extends Base{
@@ -38,16 +44,20 @@ public class Subtarefa extends Base{
 	}
 	
 	//This pop up should have a read only field with the task ID and the task description
-	public void validarCamposTaskIdETaskDescription(String novoNomeDaTarefa) {
+	public void validarCamposTaskIdETaskDescription() {
 	
 		String xPathDoNomeDaTarefa = "//h3[@class='modal-title ng-binding']";
 		
-		navegador.findElement(By.xpath(xPathDoNomeDaTarefa)).click();
+		navegador.findElement(By.xpath(xPathDoNomeDaTarefa));
 		
-		
-		String mensagem = "VALIDANDO NOME DA TAREFA: ";
-		String NomeAtualDaTarefa = navegador.findElement(By.xpath(xPathDoNomeDaTarefa)).getText();
-		Assert.assertNotEquals(mensagem, novoNomeDaTarefa, NomeAtualDaTarefa);
+		File scrFile = ((TakesScreenshot)navegador).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(scrFile, new File("/Users/edimilsonestevam/Downloads/validarCamposTaskIdETaskDescription.jpg"));
+		} 
+		catch (IOException e) {
+
+			e.printStackTrace();
+		}
 		
 	}
 	
