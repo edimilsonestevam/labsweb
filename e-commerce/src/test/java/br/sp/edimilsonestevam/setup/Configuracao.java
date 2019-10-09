@@ -20,7 +20,7 @@ public class Configuracao {
 		
 	}
 
-	public WebDriver abrirNavegador(String nomeNavegador, String url) {
+	public WebDriver AbrirNavegador(String nomeNavegador, String url) {
 
 		System.out.println("-----------------------------------Iniciando os Testes-----------------------------------");
 		
@@ -48,7 +48,7 @@ public class Configuracao {
 		return null;
 	}
 	
-	public void fecharNavegador(WebDriver navegador) {
+	public void FecharNavegador(WebDriver navegador) {
 		
 		System.out.println("-----------------------------------Terminando os Testes----------------------------------");
 		

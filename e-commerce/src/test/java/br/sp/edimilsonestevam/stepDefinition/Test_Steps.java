@@ -19,7 +19,7 @@ public class Test_Steps{
 	@Dado("^eu estou na pagina para criar uma conta no Automation Pratice http://automationpractice\\.com/index\\.php\\?controller=authentication&back=my-account#account-creation$")
 	public void eu_estou_na_pagina_para_criar_uma_conta_no_Automation_Pratice_http_automationpractice_com_index_php_controller_authentication_back_my_account_account_creation() throws Throwable {
 
-		navegador = new Configuracao().abrirNavegador("chrome", "automationpractice.com");
+		navegador = new Configuracao().AbrirNavegador("chrome", "automationpractice.com");
 		new Login(navegador).AcessarLogin();
 					
 	}
@@ -109,7 +109,7 @@ public class Test_Steps{
 	public void o_sistema_apresenta_uma_ordem_pagamento() throws Throwable {
 
 		new Pagamento(navegador).ValidarOrdemPagamento("Your order on My Store is complete.", "Pradeep Macharla", "$30.98");
-		new Configuracao().fecharNavegador(navegador);
+		new Configuracao().FecharNavegador(navegador);
 		
 	}
 }
