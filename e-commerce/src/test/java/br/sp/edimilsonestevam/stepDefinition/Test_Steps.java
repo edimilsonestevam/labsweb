@@ -24,8 +24,8 @@ public class Test_Steps{
 					
 	}
 
-	@Quando("^eu informo o meu e-mail edimilsonestevam@gmail\\.com$")
-	public void eu_informo_o_meu_e_mail_edimilsonestevam_gmail_com() throws Throwable {
+	@Quando("^eu informo o meu e-mail edimilsonestevam@owl\\.com\\.br$")
+	public void eu_informo_o_meu_e_mail_edimilsonestevam_owltechnologies_com_br() throws Throwable {
 
 		new Conta(navegador).PreCadastro("edimilsonestevam@owltechnologies.com.br");
 		
