@@ -20,7 +20,7 @@ public class Configuracao {
 		
 	}
 
-	public WebDriver abrirNavegador(String nomeNavegador, String url) {
+	public WebDriver AbrirNavegador(String nomeNavegador, String url) {
 
 		String propriedadeChrome = "webdriver.chrome.driver";
 		String propriedadeChromeCaminho = "/Users/edimilsonestevam/Downloads/drivers/chromedriver";
@@ -46,7 +46,7 @@ public class Configuracao {
 		return null;
 	}
 	
-	public void fecharNavegador(WebDriver navegador) {
+	public void FecharNavegador(WebDriver navegador) {
 		
 		this.navegador = navegador;
 		navegador.quit();

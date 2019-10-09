@@ -17,7 +17,7 @@ public class Tarefa extends Base{
 	}
 	
 	//The user should always see the ‘My Tasks’ link on the NavBar
-	public void verMinhasTarefasNoMenu(String minhaTarefaCriada, String xPathDaTarefaCriada) {
+	public void VerMinhasTarefasNoMenu(String minhaTarefaCriada, String xPathDaTarefaCriada) {
 		
 		String minhaTarefaAtual = navegador.findElement(By.xpath(xPathDaTarefaCriada)).getText();
 		
@@ -25,26 +25,26 @@ public class Tarefa extends Base{
 	}
 	
 	//Clicking this link will redirect the user to a page with all the created tasks so far
-	public void validarRedirecionamentoDePagina(String paginaDesejada) {
+	public void ValidarRedirecionamentoDePagina(String paginaDesejada) {
 		
 		 Assert.assertEquals(paginaDesejada, navegador.getCurrentUrl());
 	}
 	
 	//The user should be able to enter a new task by hitting enter or clicking on the add task button
-	public Tarefa informarNomeDaTarefa(String nomeDaTarefa) {
+	public Tarefa InformarNomeDaTarefa(String nomeDaTarefa) {
 		
 		navegador.findElement(By.id("new_task")).sendKeys(nomeDaTarefa);
 		return this;
 	}
 	
-	public Tarefa clicarTeclaEnter() {
+	public Tarefa ClicarTeclaEnter() {
 		
 		navegador.findElement(By.id("new_task")).sendKeys(Keys.ENTER);
 		navegador.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		return this;
 	}
 	
-	public Tarefa clicarIconeMais(){
+	public Tarefa ClicarIconeMais(){
 		
 		navegador.findElement(By.xpath("//span[@class='input-group-addon glyphicon glyphicon-plus']")).click();
 		navegador.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -52,7 +52,7 @@ public class Tarefa extends Base{
 	}
 
 	//The task should require at least three characters so the user can enter it
-	public Tarefa verificarQuantidadeMinimaDeCaracteres(String nomeDaTarefa) {
+	public Tarefa VerificarQuantidadeMinimaDeCaracteres(String nomeDaTarefa) {
 		
 		if(nomeDaTarefa.length() >= 3) {
 			return new Tarefa(navegador);
@@ -64,7 +64,7 @@ public class Tarefa extends Base{
 	}
 	
 	//The task can’t have more than 250 characters
-	public Tarefa verificarQuantidadeMaximaDeCaracteres(String nomeDaTarefa) {
+	public Tarefa VerificarQuantidadeMaximaDeCaracteres(String nomeDaTarefa) {
 		
 		if(nomeDaTarefa.length() <= 250) {
 			return new Tarefa(navegador);
@@ -76,14 +76,14 @@ public class Tarefa extends Base{
 	}
 	
 	//When added, the task should be appended on the list of created tasks
-	public void validarTarefaCriadaNaListaDeTarefas(String xPathDaTarefaCriada, String nomeDaTarefaCriada) {
+	public void ValidarTarefaCriadaNaListaDeTarefas(String xPathDaTarefaCriada, String nomeDaTarefaCriada) {
 		
 		String tarefaCriada = navegador.findElement(By.xpath(xPathDaTarefaCriada)).getText();
 		
 		Assert.assertEquals(nomeDaTarefaCriada, tarefaCriada);
 	}
 	
-	public Tarefa clicarMyTasks() {
+	public Tarefa ClicarMyTasks() {
 		
 		navegador.findElement(By.xpath("//a[@class='btn btn-lg btn-success']")).click();
 		return new Tarefa(navegador);

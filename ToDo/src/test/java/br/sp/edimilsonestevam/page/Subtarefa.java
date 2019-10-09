@@ -21,7 +21,7 @@ public class Subtarefa extends Base{
 	}
 	
 	//The user should see a button labeled as ‘Manage Subtasks’
-	public void verificarSeExisteBotaoManageSubtasks(String xPathBotaoManageSubtasks, String botaoDesejado) {
+	public void VerificarSeExisteBotaoManageSubtasks(String xPathBotaoManageSubtasks, String botaoDesejado) {
 		
 		String botaoAtual = navegador.findElement(By.xpath(xPathBotaoManageSubtasks)).getText();
 		
@@ -29,7 +29,7 @@ public class Subtarefa extends Base{
 	}
 
 	//This button should have the number of subtasks created for that tasks
-	public void verificarNumeroDeSubtarefasNoBotaoManageSubtasks(String nomeDoClassNameDoBotaoManageSubtasks, String nomeLabelManageSubtasks) {
+	public void VerificarNumeroDeSubtarefasNoBotaoManageSubtasks(String nomeDoClassNameDoBotaoManageSubtasks, String nomeLabelManageSubtasks) {
 		
 		String nomeDoClasseName = navegador.findElement(By.className(nomeDoClassNameDoBotaoManageSubtasks)).getText();
 		
@@ -37,14 +37,14 @@ public class Subtarefa extends Base{
 	}
 	
 	//Clicking this button opens up a modal dialog
-	public Subtarefa clicarManageSubtasks() {
+	public Subtarefa ClicarManageSubtasks() {
 		
 		navegador.findElement(By.xpath("//button[@class='btn btn-xs btn-primary ng-binding']")).click();
 		return new Subtarefa(navegador);
 	}
 	
 	//This pop up should have a read only field with the task ID and the task description
-	public void validarCamposTaskIdETaskDescription() {
+	public void ValidarCamposTaskIdETaskDescription() {
 	
 		String xPathDoNomeDaTarefa = "//h3[@class='modal-title ng-binding']";
 		
@@ -63,7 +63,7 @@ public class Subtarefa extends Base{
 	
 	//There should be a form so you can enter the SubTask Description (250 characters) and SubTask due date (MM/dd/yyyy format)
 	//The Task Description and Due Date are required fields
-	public Subtarefa informarDescricaoDaSubtarefaEDataDaSubtarefa(String descricaoDaSubtarefa, String dataDaSubtarefa) {
+	public Subtarefa InformarDescricaoDaSubtarefaEDataDaSubtarefa(String descricaoDaSubtarefa, String dataDaSubtarefa) {
 		
 		navegador.findElement(By.xpath("//input[@id='new_sub_task']")).sendKeys(descricaoDaSubtarefa);
 		navegador.findElement(By.xpath("//input[@id='dueDate']")).clear();
@@ -72,18 +72,18 @@ public class Subtarefa extends Base{
 	}
 
 	//The user should click on the add button to add a new Subtask
-	public void clicarAddNoModalDaSubtarefa() {
+	public void ClicarAddNoModalDaSubtarefa() {
 		
 		navegador.findElement(By.xpath("//button[@id='add-subtask']")).click();	
 	}
 
 	//Subtasks that were added should be appended on the bottom part of the modal dialog
-	public void teclarEnterNoModalDaSubtarefa() {
+	public void TeclarEnterNoModalDaSubtarefa() {
 		
 		navegador.findElement(By.xpath("//button[@id='add-subtask']")).sendKeys(Keys.ENTER);	
 	}
 	
-	public Subtarefa verificarSeExisteSubtarefaCadastradaNalistaDeSubtarefas(String xPtahDaSubtarefaCriada, String nomeDaSubtarefaCriada) {
+	public Subtarefa VerificarSeExisteSubtarefaCadastradaNalistaDeSubtarefas(String xPtahDaSubtarefaCriada, String nomeDaSubtarefaCriada) {
 		
 		String subtarefaCriada = navegador.findElement(By.xpath(xPtahDaSubtarefaCriada)).getText();
 		
@@ -92,7 +92,7 @@ public class Subtarefa extends Base{
 		return new Subtarefa(navegador);
 	}
 	
-	public void clicarCloseModalSubtasks() {
+	public void ClicarCloseModalSubtasks() {
 		
 		navegador.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
 	}

@@ -13,14 +13,14 @@ public class Usuario extends Base{
 		super(navegador);
 	}
 
-	public Usuario clicarRegister() {
+	public Usuario ClicarRegister() {
 		
 		navegador.findElement(By.xpath("//a[contains(text(),'Register')]")).click();
 		return new Usuario(navegador);
 			
 	}
 	
-	public Usuario informarDadosPessoais(String nome, String email, String senha, String confirmarSenha) {
+	public Usuario InformarDadosPessoais(String nome, String email, String senha, String confirmarSenha) {
 				
 		navegador.findElement(By.id("user_name")).sendKeys(nome);
 		navegador.findElement(By.id("user_email")).sendKeys(email);
@@ -30,7 +30,7 @@ public class Usuario extends Base{
 
 	}
 	
-	public Usuario clicarSignUp() {
+	public Usuario ClicarSignUp() {
 
 			navegador.findElement(By.xpath("//input[@value='Sign up']")).click();
 			navegador.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -38,7 +38,7 @@ public class Usuario extends Base{
 
 	}
 	
-	public Usuario clicarSignOut() {
+	public Usuario ClicarSignOut() {
 
 			navegador.findElement(By.xpath("//a[@data-method='delete']")).click();
 			return new Usuario(navegador);

@@ -17,14 +17,14 @@ public class Home extends Base{
 		○ eg.: If the logged user name is John, then the displayed message should be ‘Hey
 		John, this is your todo list for today:’
 	*/
-	public Home validarMensagemDepoisQueEstiverLogado(String linkTextDaMensagemDesejada, String mensagemDesejada) {
+	public Home ValidarMensagemDepoisQueEstiverLogado(String linkTextDaMensagemDesejada, String mensagemDesejada) {
 		
 		String mensagemAtual = navegador.findElement(By.linkText(linkTextDaMensagemDesejada)).getText();
 		Assert.assertEquals(mensagemDesejada, mensagemAtual);
 		return new Home(navegador);
 	}
 	
-	public Home validarPaginaCorrente(String urlEsperada) {
+	public Home ValidarPaginaCorrente(String urlEsperada) {
 		
 		Assert.assertEquals(urlEsperada, navegador.getCurrentUrl());
 		return new Home(navegador);
