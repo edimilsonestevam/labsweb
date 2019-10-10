@@ -35,7 +35,7 @@ public class Test_Steps{
 	public void eu_informo_title_Mr_first_name_Edimilson_last_name_Estevam_password_teste_date_of_birth_opcao_assinar_sign_up_for_our_newsletter_company_Owl_Technologies_address_endereco_city_São_Paulo_state_São_Paulo_zip_code_country_Brasil_mobile_phone_address_alias_Corporate(int arg1, int arg2, int arg3, int arg4) throws Throwable {
 
 		new Conta(navegador).CadastroInformacaoPessoal("Mr", "Edimilson", "Estevam", "teste123", "1", "January", "2000", "Jornal");
-		new Conta(navegador).CadastroEnderecoPessoal("Owl Technologies", "Avenida Paulista, 171", "4º andar", "Palo Alto", "California", "22434", "United States", "Sede", "213-555-0000", "212-999-0000", "Corporativo");
+		new Conta(navegador).CadastroEnderecoPessoal("Owl Technologies", "Avenida Paulista, 171", "4º andar", "Palo Alto", "California", "22434", "United States", "Sede", "213-555-0000", "212-999-0000", "Corporate");
 	
 	}
 
