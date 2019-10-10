@@ -28,7 +28,7 @@ public class Conta extends Base{
 		
 	}
 	
-	public void CadastroInformacaoPessoal(String formaTratamento, String primeiroNome, String sobrenome, String senha, String diaNascimento, String mesNascimento, String anoNascimento, String opcaoAssinatura) {
+	public void CadastroInformacaoPessoal(String formaTratamento, String nome, String sobrenome, String senha, String diaNascimento, String mesNascimento, String anoNascimento, String opcaoAssinatura) {
 		
 		System.out.println("• Realizando Cadastro de Informação Pessoal...");
 		
@@ -36,7 +36,7 @@ public class Conta extends Base{
 		String formaTratamentoMasculino = "Mr";
 		String idFormaTratamentoFeminino = "id_gender2";
 		String formaTratamentoFeminino = "Mrs";
-		String idPrimeiroNome = "customer_firstname";
+		String idNome = "customer_firstname";
 		String idSobrenome = "customer_lastname";
 		String idSenha = "passwd";
 		String idDiaNascimento = "days";
@@ -58,7 +58,7 @@ public class Conta extends Base{
 			System.out.println("Você deve informar a forma de tratamento! Ex.: Mr ou Mrs");
 		}
 		
-		navegador.findElement(By.id(idPrimeiroNome)).sendKeys(primeiroNome);
+		navegador.findElement(By.id(idNome)).sendKeys(nome);
 		navegador.findElement(By.id(idSobrenome)).sendKeys(sobrenome);
 		
 		navegador.findElement(By.id(idSenha)).sendKeys(senha);
