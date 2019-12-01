@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.sp.edimilsonestevam</groupId>
-	<artifactId>web</artifactId>
+	<artifactId>ToDo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
