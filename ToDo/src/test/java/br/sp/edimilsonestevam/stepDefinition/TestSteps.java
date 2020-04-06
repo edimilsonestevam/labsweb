@@ -15,7 +15,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 
-public class Test_Steps{
+public class TestSteps{
 
 	protected static WebDriver navegador;
 	
