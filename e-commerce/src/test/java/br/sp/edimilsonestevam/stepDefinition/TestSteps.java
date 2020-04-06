@@ -12,7 +12,7 @@ import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
 
-public class Test_Steps{
+public class TestSteps{
 
 	protected static WebDriver navegador;
 
