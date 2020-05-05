@@ -1,4 +1,4 @@
-# language: pt
+#language: pt
 
 @Compra
 Funcionalidade: Realizar compra de um produto
