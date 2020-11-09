@@ -14,7 +14,7 @@ public class Configuracao {
 		
 	}
 
-	public void setDriver(WebDriver navegador) {
+	public void setDriver (WebDriver navegador) {
 		
 		this.navegador = navegador;
 		
