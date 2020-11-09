@@ -23,7 +23,7 @@ public class TestSteps{
 	@Given("^eu quero cadastrar um usuario no app ToDo$")
 	public void eu_quero_cadastrar_um_usuario_no_app_ToDo() throws Throwable {
 
-		navegador = new Configuracao().AbrirNavegador("chrome", "qa-test.avenuecode.com");
+		navegador = new Configuracao().abrirNavegador("chrome", "qa-test.avenuecode.com");
 	}
 
 	@Test
@@ -84,6 +84,6 @@ public class TestSteps{
 
 		new Subtarefa(navegador).VerificarSeExisteSubtarefaCadastradaNalistaDeSubtarefas("//a[contains(text(),'DescricaoTeste1')]", "DescricaoTeste1").ClicarCloseModalSubtasks();
 		new Usuario(navegador).ClicarSignOut();
-		new Configuracao().FecharNavegador(navegador);
+		new Configuracao().fecharNavegador(navegador);
 	}
 }

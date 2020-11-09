@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Configuracao {
 
-	protected WebDriver navegador;
+	protected WebDriver navegador = null;
 
 	public WebDriver getDriver() {
 		
@@ -20,12 +20,14 @@ public class Configuracao {
 		
 	}
 
-	public WebDriver AbrirNavegador(String nomeNavegador, String url) {
+	public WebDriver abrirNavegador(String nomeNavegador, String url) {
 
+		System.out.println("-----------------------------------Iniciando os Testes-----------------------------------");
+		
 		String propriedadeChrome = "webdriver.chrome.driver";
-		String propriedadeChromeCaminho = "/Users/edimilsonestevam/Downloads/drivers/chromedriver";
+		String propriedadeChromeCaminho = "C:\\Drivers\\chromedriver.exe";
 		String propriedadeFirefox = "webdriver.gecko.driver";
-		String prorpiedadeFirefoxCaminho = "/Users/edimilsonestevam/Downloads/drivers/geckodriver";
+		String prorpiedadeFirefoxCaminho = "C:\\Drivers\\geckodriver.exe";
 		String https = "https://";
 
 		if (nomeNavegador.equalsIgnoreCase("chrome")) {
@@ -46,7 +48,9 @@ public class Configuracao {
 		return null;
 	}
 	
-	public void FecharNavegador(WebDriver navegador) {
+	public void fecharNavegador(WebDriver navegador) {
+		
+		System.out.println("-----------------------------------Terminando os Testes----------------------------------");
 		
 		this.navegador = navegador;
 		navegador.quit();
