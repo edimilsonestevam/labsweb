@@ -28,7 +28,7 @@ public class Configuracao {
 		String propriedadeChromeCaminho = "C:\\Drivers\\chromedriver.exe";
 		String propriedadeFirefox = "webdriver.gecko.driver";
 		String prorpiedadeFirefoxCaminho = "C:\\Drivers\\geckodriver.exe";
-		String https = "http://";
+		String https = "https://";
 
 		if (nomeNavegador.equalsIgnoreCase("chrome")) {
 			System.setProperty(propriedadeChrome, propriedadeChromeCaminho);
