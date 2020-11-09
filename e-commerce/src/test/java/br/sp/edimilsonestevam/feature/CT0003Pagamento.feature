@@ -1,4 +1,4 @@
-# language: pt
+#language: pt
 
 @Pagamento
 Funcionalidade: Realizar pagamento de um produto

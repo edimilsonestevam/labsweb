@@ -25,10 +25,17 @@ public class Configuracao {
 		System.out.println("-----------------------------------Iniciando os Testes-----------------------------------");
 		
 		String propriedadeChrome = "webdriver.chrome.driver";
-		String propriedadeChromeCaminho = "C:\\Drivers\\chromedriver.exe";
+		//String propriedadeChromeCaminho = "C:\\Drivers\\chromedriver.exe";
+		String propriedadeChromeCaminho = "/home/edimilson/Drivers/chromedriver";
 		String propriedadeFirefox = "webdriver.gecko.driver";
+<<<<<<< HEAD
 		String prorpiedadeFirefoxCaminho = "C:\\Drivers\\geckodriver.exe";
 		String https = "https://";
+=======
+		//String prorpiedadeFirefoxCaminho = "C:\\Drivers\\geckodriver.exe";
+		String prorpiedadeFirefoxCaminho = "/home/edimilson/Drivers/geckodriver";
+		String https = "http://";
+>>>>>>> 96209b73ea511048d0554ebae0e5a45c328935e7
 
 		if (nomeNavegador.equalsIgnoreCase("chrome")) {
 			System.setProperty(propriedadeChrome, propriedadeChromeCaminho);
